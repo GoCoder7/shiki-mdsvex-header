@@ -5,10 +5,10 @@ export function addHeader(options = {}) {
   const headerToBottom = options.headerToBottom ?? false;
   const langCase = options.langCase ?? "cap"; // up, cap, none
   const langClass = options.langClass ?? "lang";
+  const langFirst = options.titleFirst ?? false;
   const langVisible = options.langVisible ?? true;
   const titleCase = options.titleCase; // up, low, cap, none
   const titleClass = options.titleClass ?? "title";
-  const titleFirst = options.titleFirst ?? false;
   const titleVisible = options.titleVisible ?? true;
   return {
     pre(node) {
@@ -68,10 +68,10 @@ export function addHeader(options = {}) {
       let titleEl;
       if (titleVisible && title) {
         titleEl = h("span", { class: titleClass }, title);
-        if (titleFirst) {
-          headerChildren.unshift(titleEl);
-        } else {
+        if (langFirst) {
           headerChildren.push(titleEl);
+        } else {
+          headerChildren.unshift(titleEl);
         }
       }
 
