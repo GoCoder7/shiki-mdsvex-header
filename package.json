@@ -1,7 +1,7 @@
 {
   "name": "@gocoder/shiki-mdsvex-header",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a shiki transformer for mdsvex that adds a header as a child of pre.shiki element",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,6 @@
     "hastscript": "^9.0.0"
   },
   "license": "MIT",
-  "homepage": "https://www.gocoder.xyz"
+  "homepage": "https://www.gocoder.xyz",
+  "repository": "github:GoCoder7/shiki-mdsvex-header"
 }
