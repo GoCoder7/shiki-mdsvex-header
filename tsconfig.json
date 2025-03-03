@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "NodeNext",
+    "rootDir": "./src",
+    "declaration": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "nodenext",
+    "noUncheckedIndexedAccess": true, // 배열과 객체의 인덱스접근(예. arr[0], fruit["apple"])에 undefined를 추가하도록 강제하여 런타임 고려사항을 컴파일타임으로 이동
+    "noEmit": true // tsc로 컴파일 하지 않고 체크만 하도록 설정
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

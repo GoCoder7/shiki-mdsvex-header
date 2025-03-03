@@ -119,7 +119,7 @@ export async function highlight(code, lang) {
 | **langVisible**    | if false, remove the **lang**(`span` element) from the **header**                                                                         | **"true"**    |
 | **titleCase**      | define the case of the **title** string<br>- `"cap"`: capitalize<br>- `"up"`: uppercase<br>- `"low"`: lowercase<br>- `"none"`: raw string | **"none"**    |
 | **titleClass**     | the class for the **title**(`span` element)                                                                                               | **"title"**   |
-| **titleFirst**     | if true, place the **title** before **lang**<br>or place the **title** after **lang**                                                     | **false**     |
+| **langFirst**      | if true, place the **lang** before **title**<br>or place the **lang** after **title** by default                                          | **false**     |
 | **titleVisible**   | if false, remove the **title**(`span` element) from the **header**                                                                        | **true**      |
 
 # License
