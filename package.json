@@ -1,6 +1,6 @@
 {
   "name": "@gocoder/shiki-mdsvex-header",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "a shiki transformer for mdsvex that adds a header as a child of pre.shiki element",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
