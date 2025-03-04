@@ -1,5 +1,11 @@
 # @gocoder/shiki-mdsvex-header
 
+## 1.1.4
+
+### Patch Changes
+
+- 2554b27: doc: adjust order and codes
+
 ## 1.1.3
 
 ### Patch Changes
