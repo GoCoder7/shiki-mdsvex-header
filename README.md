@@ -72,24 +72,32 @@ const shikiTransformers = [
 	...
 ]
 
-export async function highlight(code, lang) {
-  return await codeToHtml(code, {
-    lang,
-	theme: 'dracula',
-    transformers: shikiTransformers,
-    // ...
-  });
-}
+const shikiHighlighter = await createHighlighter({...});
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const html = escapeSvelte(
+				shikiHighlighter.codeToHtml(code, {
+					lang,
+					theme: 'dracula',
+					transformers: shikiTransformers,
+					...
+				})
+			);
+			return `{@html \`${html}\`}`;
+		}
+	},
+};
 ```
 
 ## Config
-if we want to use `shiki` in `mdsvex`, we should specify `highlighter()`function.
+if we want to use `shiki` in `mdsvex`, we should specify `highlight.highlighter()`function.
 
 this is the things you should have to do for make this library works
 
-1. open `svelte.config.js` file
-2. specify the **metadata** parameter of _mdsvexOptions_'s `highlighter()` function as the **3rd parameter**
-3. add `meta` property to the `codeToHtml()`method's option as an object with `lang` and `meta` properties
+1. specify the **metadata** parameter of _mdsvexOptions_'s `highlighter()` function as the **3rd parameter**
+2. add `meta` property to the `codeToHtml()`method's option as an object with `lang` and `meta` properties
 
 ```js
 // svelte.config.js
@@ -98,13 +106,13 @@ const shikiHighlighter = await createHighlighter({...});
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	highlight: {
-		highlighter: async (code, lang = 'text', meta) => {
+		highlighter: async (code, lang = 'text', meta) => { // get 3rd param
 			const html = escapeSvelte(
 				shikiHighlighter.codeToHtml(code, {
 					lang,
 					theme: 'dracula',
 					transformers: shikiTransformers,
-					meta: { lang, meta },
+					meta: { lang, meta }, // add meta
 					...
 				})
 			);
