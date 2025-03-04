@@ -1,5 +1,11 @@
 # @gocoder/shiki-mdsvex-header
 
+## 1.1.5
+
+### Patch Changes
+
+-
+
 ## 1.1.4
 
 ### Patch Changes
