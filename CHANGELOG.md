@@ -1,5 +1,11 @@
 # @gocoder/shiki-mdsvex-header
 
+## 1.1.6
+
+### Patch Changes
+
+- 8761416: remove node_modules tracking files from git
+
 ## 1.1.5
 
 ### Patch Changes
