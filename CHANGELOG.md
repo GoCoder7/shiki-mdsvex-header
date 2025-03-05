@@ -1,5 +1,11 @@
 # @gocoder/shiki-mdsvex-header
 
+## 1.1.11
+
+### Patch Changes
+
+- d3351a0: remove package scope '@gocoder'
+
 ## 1.1.10
 
 ### Patch Changes

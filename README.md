@@ -54,12 +54,13 @@ console.log("Hello World!");
 # Init
 
 ```shell
-pnpm i -D @gocoder/shiki-mdsvex-header
+pnpm i -D shiki-mdsvex-header
 ```
 
 ## Add Transformer
+
 ```js
-import { addHeader } from "@gocoder/shiki-mdsvex-header";
+import { addHeader } from "shiki-mdsvex-header";
 
 // optional
 const addHeaderOptions = {
@@ -92,6 +93,7 @@ const mdsvexOptions = {
 ```
 
 ## Config
+
 if we want to use `shiki` in `mdsvex`, we should specify `highlight.highlighter()`function.
 
 this is the things you should have to do for make this library works
