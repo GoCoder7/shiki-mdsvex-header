@@ -1,3 +1,0 @@
----
-"shiki-mdsvex-header": patch
----
